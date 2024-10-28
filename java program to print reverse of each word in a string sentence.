@@ -1,0 +1,32 @@
+import java.util.Scanner;
+class Main 
+{
+    public static void main(String[]args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter a sentence");
+        String s=sc.nextLine();
+        int start=0;
+        String word="";
+        String sen="";
+        for(int i=0;i<s.length();i++)
+        {
+            if(s.charAt(i)==' ' || i==s.length())
+            {
+                for(int j=i-1;j>=start;j--)
+                {
+                    word+=s.charAt(j);
+                }
+                sen=sen+" "+word;
+                start=i+1;
+                word="";
+            }
+        }
+        for(int j=s.length()-1;j>=start;j--)
+        {
+            word+=s.charAt(j);
+        }
+        sen+=" "+word;
+        System.out.println("the reverse version of "+"==|"+s+"|=="+" is "+"==|"+sen.trim()+"|==");
+    }
+}
