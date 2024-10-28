@@ -1,0 +1,24 @@
+import java.util.Scanner;
+class Main 
+{
+    public static void main(String[]args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter a word:");
+        String s=sc.next();
+        System.out.println("enter second word:");
+        String s1=sc.next();
+        while(s.length()>0)
+        {
+            if(s.length()!=s1.length() || s.length()==0)
+            {
+                System.out.println("not a anagram");
+                return;
+            }
+            char c=s.charAt(0);
+            s=s.replace(c+"","");
+            s1=s1.replace(c+"","");
+        }
+        System.out.println("anagram");
+    }
+}
