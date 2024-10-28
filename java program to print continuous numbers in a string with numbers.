@@ -1,0 +1,28 @@
+import java.util.Scanner ;
+class Main 
+{
+    public static void main(String[]args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter a word with alphabets and numbers");
+        String s=sc.next();
+        String s1=s.toLowerCase();
+        int num=0;
+        int sum=0;
+        char[]c=s1.toCharArray();
+        int i=0;
+        System.out.println("numbers present in string are");
+        while(i<c.length)
+        {
+            while(i<c.length && c[i]>='0' && c[i]<='9')
+            {
+                num=(num*10)+c[i]-'0';
+                i++;
+            }
+            sum=num;
+            num=0;
+            i++;
+            if(sum>0)System.out.println(sum);
+        }
+    }
+}
