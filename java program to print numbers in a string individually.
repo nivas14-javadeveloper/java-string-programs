@@ -1,0 +1,24 @@
+import java.util.Scanner ;
+class Main 
+{
+    public static void main(String[]args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter a word with alphabets and numbers");
+        String s=sc.next();
+        String s1=s.toLowerCase();
+        int num=0;
+        char[]c=s1.toCharArray();
+        int i=0;
+        System.out.println("numers in "+s+" are");
+        while(i<c.length)
+        {
+            if(c[i]>='0' && c[i]<='9')
+            {
+                num=c[i]-'0';
+                        System.out.println(num);
+            }
+            i++;
+        }
+    }
+}
