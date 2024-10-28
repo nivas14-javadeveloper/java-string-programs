@@ -1,0 +1,21 @@
+import java.util.Scanner ;
+class Main 
+{
+    public static void main(String[]args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter a word with alphabets and numbers");
+        String s=sc.next();
+        int num=0;
+        char[]c=s.toCharArray();
+        System.out.println("the numbers present in "+s+" are ");
+        for(int i=0;i<c.length;i++)
+        {
+            if(c[i]>='0' && c[i]<='9')
+            {
+                num=c[i]-'0';
+                System.out.println(num);
+            }
+        }
+    }
+}
